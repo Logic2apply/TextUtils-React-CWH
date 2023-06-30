@@ -67,14 +67,19 @@ export default function TextForm(props) {
         setText(event.target.value)
     }
 
+
+    // const handle = (passValue) => {
+        
+    // }
+
     return (
         <>
             <div className='container my-4'>
-                <h2 className="heading" style={{color: props.mode==='dark'?'white':'#272727'}}>
+                <h2 className="heading" style={{color: props.mode==='light'?'#272727':'#ebebeb'}}>
                     {props.heading}
                 </h2>
                 <div className="mb-3">
-                    <textarea className="form-control" id="textarea" rows="8" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#333333':'white', color: props.mode==='dark'?'white':'#333333'}}></textarea>
+                    <textarea className="form-control tint" id="textarea" rows="8" value={text} onChange={handleOnChange} style={{backgroundColor: props.bgcolor, color: props.mode==='light'?'black':'#fff', borderColor: props.mode==='light'?'#555555':'#fff'}}></textarea>
                 </div>
                 <button className="btn btn-dark mx-1" onClick={handleUpClick}>Convert to UPPER CASE</button>
                 <button className="btn btn-dark mx-1" onClick={handleLowClick}>Convert to Lower Case</button>
@@ -84,8 +89,8 @@ export default function TextForm(props) {
                 <button className="btn btn-dark mx-1" onClick={handleCopyClick}>Copy text</button>
                 <button className="btn btn-danger mx-1" onClick={handleClearClick}>Clear Text</button>
             </div>
-            <div className="container my-4"  style={{color: props.mode==='dark'?'white':'#042743'}}>
-                <h4 className='h4'>Your text summary</h4>
+            <div className="container my-4"  style={{color: props.mode==='light'? '#042743':'white'}}>
+                <h4 className='h4 text-blue-500'>Your text summary</h4>
                 <p>{text.split(" ").length} words and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} minutes read</p>
                 <h4>Preview</h4>
