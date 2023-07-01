@@ -46,7 +46,7 @@ function App() {
         }
         else if (theme === 'dark-teal') {
             setMode('dark-teal');
-            let bg = '#072c21';
+            let bg = '#0b221a';
             document.body.style.backgroundColor = bg;
             setBgcolor(bg);
             showAlert("Dark-Teal mode has been enabled.", "success") ;
